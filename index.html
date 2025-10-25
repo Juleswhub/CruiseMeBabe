@@ -118,24 +118,23 @@
             align-items: start;
         }
 
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
+       .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+}
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
         .director-image-container {
             width: 100%;
@@ -711,11 +710,14 @@
             <div class="hero-content">
                 <div>
                     <div class="video-wrapper">
-                        <iframe
-                            src="https://player.vimeo.com/video/1130515170?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                            title="Cruise Me Project Presentation">
-                        </iframe>
+    <iframe
+        src="https://player.vimeo.com/video/1130515170?badge=0&autopause=0&player_id=0&app_id=58479"
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+        allowfullscreen
+        title="Cruise Me Project Presentation">
+    </iframe>
+</div>
                     </div>
                     <p style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;">
                         Project presentation video
