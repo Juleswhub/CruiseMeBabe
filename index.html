@@ -662,6 +662,12 @@
         }
 
         @media (max-width: 768px) {
+    .hero-content > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+        
+        @media (max-width: 768px) {
             .header {
                 padding: 15px 20px;
             }
@@ -702,48 +708,49 @@
             </nav>
         </div>
     </header>
-
     <!-- Main Container -->
     <div class="main-container">
         <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="hero-content">
-                <div>
-                    <div class="video-wrapper">
-    <iframe
-        src="https://player.vimeo.com/video/1130515170?badge=0&autopause=0&player_id=0&app_id=58479"
-        frameborder="0" 
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-        allowfullscreen
-        title="Cruise Me Project Presentation">
-    </iframe>
-</div>
+                <!-- Video and Team Image Side by Side -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 20px;">
+                    <!-- Video Section -->
+                    <div>
+                        <p style="text-align: center; margin-bottom: 15px; color: #300549; font-size: 16px; font-weight: 500;">
+                            Project presentation video
+                        </p>
+                        <div class="video-wrapper">
+                            <iframe
+                                src="https://player.vimeo.com/video/1130515170?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                allowfullscreen
+                                title="Cruise Me Project Presentation">
+                            </iframe>
+                        </div>
                     </div>
-                    <p style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;">
-                        Project presentation video
-                    </p>
-
-                    <div
-                        style="background: #ffffff; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #300549;">
-                        <strong>Campaign ends in 30 days!</strong> Help us reach our goal.
-                    </div>
-
+                    
+                    <!-- Team Image Section -->
                     <div class="director-image-container"
                         onclick="document.getElementById('team').scrollIntoView({ behavior: 'smooth' });">
-                        <div style="position: relative; display: inline-block;">
+                        <p style="text-align: center; margin-bottom: 15px; color: #300549; font-size: 16px; font-weight: 500;">
+                            Meet the team
+                        </p>
+                        <div style="position: relative; display: inline-block; width: 100%;">
                             <img src="https://cdn.myportfolio.com/19810dbf-b060-4e10-8444-931712f98fed/55b42162-4485-4bf9-a1a3-209c865eebdf_rw_1920.png?h=604bdb136ed434aa98bb34c25e1de30f"
                                 alt="Directors" class="director-image">
                             <div class="team-hover-overlay">
-                                <span style="font-size: 16px; font-weight: 500;">Meet the team</span>
+                                <span style="font-size: 16px; font-weight: 500;">Click to learn more</span>
                             </div>
                         </div>
-                        <p style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;">
-                            Click to meet the team
-                        </p>
                     </div>
                 </div>
-
-
+                
+                <div style="background: #ffffff; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #300549;">
+                    <strong>Campaign ends in 30 days!</strong> Help us reach our goal.
+                </div>
+                
                 <div class="hero-text">
                     <h2>Support Our Vision</h2>
                     <p>Have you ever felt dizzy while looking at the sky, feeling like all this
@@ -753,7 +760,9 @@
                         mysterious girl named Bliss, recalls witnessing a surreal encounter: the
                         soul of a man dressed in a tuxedo, floating in the sky, being guided through
                         Luxembourg's city streets by an angel.</p>
-
+                </div>
+            </div>
+        </section>
                     <!-- Social Share Buttons -->
                     <div class="social-share">
                         <h4 style="width: 100%; margin-bottom: 10px; color: #300549;">Share this project:</h4>
