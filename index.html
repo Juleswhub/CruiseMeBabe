@@ -864,14 +864,18 @@
                     </div>
                     
                     <!-- Team Image -->
-                    <div style="margin-bottom: 40px; cursor: pointer;" onclick="document.getElementById('team').scrollIntoView({ behavior: 'smooth' });">
-                        <h3 style="text-align: center; color: #300549; font-size: 24px; margin-bottom: 20px;">Meet the Team</h3>
-                        <img src="https://cdn.myportfolio.com/19810dbf-b060-4e10-8444-931712f98fed/55b42162-4485-4bf9-a1a3-209c865eebdf_rw_1920.png?h=604bdb136ed434aa98bb34c25e1de30f"
-                            alt="Directors"
-                            style="width: 100%; height: auto; border-radius: 12px;">
-                        <p style="text-align: center; margin-top: 15px; color: #666;">Click to see full team bios ↓</p>
-                    </div>
-                </div>
+<div style="margin-bottom: 40px; cursor: pointer;" class="team-card" onclick="document.getElementById('team').scrollIntoView({ behavior: 'smooth' });">
+    <h3 style="text-align: center; color: #300549; font-size: 24px; margin-bottom: 20px;">Meet the Team</h3>
+    <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px;">
+        <img src="https://cdn.myportfolio.com/19810dbf-b060-4e10-8444-931712f98fed/55b42162-4485-4bf9-a1a3-209c865eebdf_rw_1920.png?h=604bdb136ed434aa98bb34c25e1de30f"
+            alt="Directors"
+            style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
+        <div class="team-hover-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(48, 5, 73, 0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; border-radius: 12px;">
+            <span style="color: white; font-size: 20px; font-weight: 500;">Click to learn more</span>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 15px; color: #666;">Click to see full team bios ↓</p>
+</div>
                 
                 <div class="hero-text">
                     <h2>Cruise Me, Cruise Me Babe</h2>
