@@ -1374,6 +1374,19 @@
                 behavior: 'smooth'
             });
         }
+//Header bar
+function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active');
+}
+
+// Hide loading screen
+window.addEventListener('load', function() {
+    const loading = document.getElementById('loading');
+    if (loading) {
+        loading.style.display = 'none';
+    }
+});
 
         // Event listeners
         backToTop.addEventListener('click', scrollToTop);
