@@ -820,86 +820,74 @@
 </head>
 
 <body>
-    <!-- Header with Navigation -->
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- Header -->
     <header class="header">
-        <div class="header-content">
-            <h1>Cruise Me, Cruise Me Babe</h1>
-            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
-            <nav class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#donate" class="nav-link">Donate</a>
-                <a href="#team" class="nav-link">Team</a>
-                <a href="#budget" class="nav-link">Budget</a>
-                <a href="#timeline" class="nav-link">Timeline</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#donate" class="donate-header-btn">Donate Now</a>
-            </nav>
-        </div>
+        <h1>Cruise Me, Cruise Me Babe</h1>
     </header>
     
     <!-- Main Container -->
     <div class="main-container">
         <!-- Hero Section -->
-        <section class="hero-section" id="home">
-            <div class="hero-content" style="max-width: 100%; padding: 0;">
-                <!-- Video Section (NO CARD) -->
-                <div style="padding: 50px 80px;">
-                    <p style="margin: 0 0 30px 0; color: #300549; font-size: 26px; font-weight: 600; text-align: center;">
-                        Project Presentation Video
-                    </p>
-                    <div style="max-width: 1400px; margin: 0 auto;">
-                        <div class="video-wrapper" style="padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                            <iframe
-                                src="https://player.vimeo.com/video/1130515170?badge=0&autopause=0&player_id=0&app_id=58479"
-                                frameborder="0" 
-                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                                allowfullscreen
-                                title="Cruise Me Project Presentation"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            </iframe>
-                        </div>
-                    </div>
-                    <p style="text-align: center; margin-top: 25px; color: #666; font-size: 18px;">
-                        Watch our 2-minute pitch
-                    </p>
-                </div>
-                
-                <!-- Team Image Section (NO CARD) -->
-                <div style="padding: 50px 80px; cursor: pointer;"
-                     class="team-card"
-                     onclick="document.getElementById('team').scrollIntoView({ behavior: 'smooth' });">
-                    <p style="margin: 0 0 30px 0; color: #300549; font-size: 26px; font-weight: 600; text-align: center;">
-                        Meet the Team
-                    </p>
-                    <div style="max-width: 1400px; margin: 0 auto;">
-                        <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                            <img src="https://cdn.myportfolio.com/19810dbf-b060-4e10-8444-931712f98fed/55b42162-4485-4bf9-a1a3-209c865eebdf_rw_1920.png?h=604bdb136ed434aa98bb34c25e1de30f"
-                                alt="Directors" class="director-image"
-                                style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-                            <div class="team-hover-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(48, 5, 73, 0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
-                                <span style="color: white; font-size: 22px; font-weight: 500;">👥 Click to learn more</span>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div>
+                    <!-- Video Section (NO CARD) -->
+                    <div style="padding: 30px 0; margin-bottom: 40px;">
+                        <p style="margin: 0 0 25px 0; color: #300549; font-size: 24px; font-weight: 600; text-align: center;">
+                            Project Presentation Video
+                        </p>
+                        <div style="max-width: 100%; margin: 0 auto;">
+                            <div class="video-wrapper" style="padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <iframe
+                                    src="https://player.vimeo.com/video/1130515170?badge=0&autopause=0&player_id=0&app_id=58479"
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                    allowfullscreen
+                                    title="Cruise Me Project Presentation"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                </iframe>
                             </div>
                         </div>
+                        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 16px;">
+                            Watch our 2-minute pitch
+                        </p>
                     </div>
-                    <p style="text-align: center; margin-top: 25px; color: #666; font-size: 18px;">
-                        Click to see full team bios →
-                    </p>
+                    
+                    <!-- Team Image Section (NO CARD) -->
+                    <div style="padding: 30px 0; cursor: pointer; margin-bottom: 40px;"
+                         class="team-card"
+                         onclick="document.getElementById('team-section').scrollIntoView({ behavior: 'smooth' });">
+                        <p style="margin: 0 0 25px 0; color: #300549; font-size: 24px; font-weight: 600; text-align: center;">
+                            Meet the Team
+                        </p>
+                        <div style="max-width: 100%; margin: 0 auto;">
+                            <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                <img src="https://cdn.myportfolio.com/19810dbf-b060-4e10-8444-931712f98fed/55b42162-4485-4bf9-a1a3-209c865eebdf_rw_1920.png?h=604bdb136ed434aa98bb34c25e1de30f"
+                                    alt="Directors" class="director-image"
+                                    style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
+                                <div class="team-hover-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(48, 5, 73, 0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; border-radius: 12px;">
+                                    <span style="color: white; font-size: 20px; font-weight: 500;">👥 Click to learn more</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 16px;">
+                            <span style="display: inline-block; margin-right: 8px; animation: bounce 2s infinite;">↓</span>
+                            Click to see full team bios
+                            <span style="display: inline-block; margin-left: 8px; animation: bounce 2s infinite;">↓</span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
                 
-                <!-- Story Section (BELOW - Full Width Centered) -->
-                <div class="hero-text" style="background: #ffffff; padding: 60px 80px; text-align: center; max-width: 1400px; margin: 0 auto;">
-                    <h2 style="color: #300549; margin-bottom: 35px; font-size: 42px; font-weight: 700;">Support Our Vision</h2>
-                    <p style="line-height: 2.2; font-size: 20px; color: #444; max-width: 1100px; margin: 0 auto;">
-                        Have you ever felt dizzy while looking at the sky, feeling like all this
-                        blueness was just a collage? This feeling is the genesis of our project.
-                        Inspired by Magritte's paintings, the film tells the story of an insomniac
-                        photographer, Maxy, who, during a late-night phone conversation with a
-                        mysterious girl named Bliss, recalls witnessing a surreal encounter: the
-                        soul of a man dressed in a tuxedo, floating in the sky, being guided through
-                        Luxembourg's city streets by an angel.
-                    </p>
+                <div class="hero-text">
+                    <h2>Cruise Me, Cruise Me Babe</h2>
+                    <p>Have you ever felt dizzy while looking at the sky, feeling like all this blueness was just a collage? This feeling is the genesis of our project. Inspired by Magritte's paintings, the film tells the story of an insomniac photographer, Maxy, who, during a late-night phone conversation with a mysterious girl named Bliss, recalls witnessing a surreal encounter: the soul of a man dressed in a tuxedo, floating in the sky, being guided through Luxembourg's city streets by an angel.</p>
+                    <h3 style="font-size: 22px; margin-top: 30px;">Because a film lives only when it's seen, help us take it where it's never been!</h3>
+                    <br>
                 </div>
             </div>
         </section>
