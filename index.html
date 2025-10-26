@@ -757,6 +757,35 @@
     opacity: 1 !important;
 }
 
+       
+@media (max-width: 968px) {
+    .hero-content > div {
+        padding: 40px 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content > div {
+        padding: 30px 20px !important;
+    }
+    
+    .hero-content p[style*="font-size: 26px"] {
+        font-size: 20px !important;
+    }
+    
+    .hero-content svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}
+
+.team-card:hover .director-image {
+    transform: scale(1.02);
+}
+
+.team-card:hover .team-hover-overlay {
+    opacity: 1 !important;
+ }
         
         @media (max-width: 768px) {
             .header {
@@ -805,18 +834,17 @@
         <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="hero-content" style="max-width: 100%; padding: 0;">
-                <!-- Video and Team Image Side by Side (MAXIMUM SIZE) -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 0; min-height: 70vh;" class="hero-media-grid">
-                    <!-- Video Section (MAXIMUM SIZE) -->
-                    <div style="background: #ffffff; padding: 50px 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: center;">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 30px;">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#300549" stroke-width="2">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            <p style="margin: 0; color: #300549; font-size: 26px; font-weight: 600;">
-                                Project Presentation Video
-                            </p>
-                        </div>
+                <!-- Video Section (FULL WIDTH) -->
+                <div style="background: #ffffff; padding: 50px 80px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 30px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#300549" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <p style="margin: 0; color: #300549; font-size: 26px; font-weight: 600;">
+                            Project Presentation Video
+                        </p>
+                    </div>
+                    <div style="max-width: 1400px; margin: 0 auto;">
                         <div class="video-wrapper" style="padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                             <iframe
                                 src="https://player.vimeo.com/video/1130515170?badge=0&autopause=0&player_id=0&app_id=58479"
@@ -827,28 +855,30 @@
                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             </iframe>
                         </div>
-                        <p style="text-align: center; margin-top: 25px; color: #666; font-size: 18px;">
-                            Watch our 2-minute pitch
+                    </div>
+                    <p style="text-align: center; margin-top: 25px; color: #666; font-size: 18px;">
+                        Watch our 2-minute pitch
+                    </p>
+                </div>
+                
+                <!-- Team Image Section (FULL WIDTH) -->
+                <div style="background: #ffffff; padding: 50px 80px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                     class="team-card"
+                     onclick="document.getElementById('team').scrollIntoView({ behavior: 'smooth' });"
+                     onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.12)';"
+                     onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)';">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 30px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#300549" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <p style="margin: 0; color: #300549; font-size: 26px; font-weight: 600;">
+                            Meet the Team
                         </p>
                     </div>
-                    
-                    <!-- Team Image Section (MAXIMUM SIZE) -->
-                    <div style="background: #ffffff; padding: 50px 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; justify-content: center;"
-                         class="team-card"
-                         onclick="document.getElementById('team').scrollIntoView({ behavior: 'smooth' });"
-                         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.12)';"
-                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)';">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 30px;">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#300549" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <p style="margin: 0; color: #300549; font-size: 26px; font-weight: 600;">
-                                Meet the Team
-                            </p>
-                        </div>
+                    <div style="max-width: 1400px; margin: 0 auto;">
                         <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                             <img src="https://cdn.myportfolio.com/19810dbf-b060-4e10-8444-931712f98fed/55b42162-4485-4bf9-a1a3-209c865eebdf_rw_1920.png?h=604bdb136ed434aa98bb34c25e1de30f"
                                 alt="Directors" class="director-image"
@@ -857,11 +887,13 @@
                                 <span style="color: white; font-size: 22px; font-weight: 500;">👥 Click to learn more</span>
                             </div>
                         </div>
-                        <p style="text-align: center; margin-top: 25px; color: #666; font-size: 18px;">
-                            Click to see full team bios →
-                        </p>
                     </div>
+                    <p style="text-align: center; margin-top: 25px; color: #666; font-size: 18px;">
+                        Click to see full team bios →
+                    </p>
                 </div>
+            </div>
+        </section>
                 
                 <!-- Story Section (BELOW - Full Width Centered) -->
                 <div class="hero-text" style="background: #ffffff; padding: 60px 80px; text-align: center; max-width: 1400px; margin: 0 auto;">
