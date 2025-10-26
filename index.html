@@ -271,69 +271,70 @@
         }
 
         /* Social Share Buttons */
-        /* Social Share Buttons */
-        .social-share {
-            display: flex;
-            gap: 10px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-            align-items: center;
-        }
+      .social-share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
 
-        .share-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px;
-            border-radius: 50%;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            width: 45px;
-            height: 45px;
-        }
+.social-share h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #300549;
+}
 
-        .share-button:hover {
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        }
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .share-facebook {
-            background: #1877f2;
-        }
+.share-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-        .share-twitter {
-            background: #1da1f2;
-        }
+.share-facebook { background: #1877f2; }
+.share-twitter { background: #1da1f2; }
+.share-linkedin { background: #0077b5; }
+.share-instagram { background: #e4405f; }
+.share-whatsapp { background: #25d366; }
+.share-email { background: #666; }
 
-        .share-linkedin {
-            background: #0077b5;
-        }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .social-share {
+        gap: 12px;
+        padding: 0 10px;
+    }
+    
+    .share-button {
+        width: 45px;
+        height: 45px;
+    }
+}
 
-        .share-email {
-            background: #666;
-        }
-
-        .share-whatsapp {
-            background: #25d366;
-        }
-
-        .share-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
-
-        @media (max-width: 768px) {
-            .share-button {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
-            }
-        }
+@media (max-width: 480px) {
+    .social-share {
+        gap: 10px;
+    }
+    
+    .share-button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
 
         /* Recent Activity Feed */
         .activity-feed {
