@@ -680,6 +680,33 @@
 .team-card:hover .team-hover-overlay {
     opacity: 1 !important;
 }
+
+
+@media (max-width: 768px) {
+    .hero-media-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hero-text {
+        padding: 30px 20px !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 28px !important;
+    }
+    
+    .hero-text p {
+        font-size: 16px !important;
+    }
+}
+
+.team-card:hover .director-image {
+    transform: scale(1.05);
+}
+
+.team-card:hover .team-hover-overlay {
+    opacity: 1 !important;
+}
         
         @media (max-width: 768px) {
             .header {
@@ -728,8 +755,8 @@
         <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="hero-content">
-                <!-- Video and Team Image Side by Side (EVEN BIGGER) -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; max-width: 1400px; margin-left: auto; margin-right: auto;" class="hero-media-grid">
+                <!-- Video and Team Image Side by Side (BIGGER) -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;" class="hero-media-grid">
                     <!-- Video Section (BIGGER) -->
                     <div style="background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px;">
@@ -786,10 +813,10 @@
                     </div>
                 </div>
                 
-                <!-- Story Section (ENLARGED - Full Width) -->
-                <div class="hero-text" style="background: #ffffff; padding: 50px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 1200px; margin: 0 auto; text-align: center;">
+                <!-- Story Section (BELOW - Full Width Centered) -->
+                <div class="hero-text" style="background: #ffffff; padding: 50px 60px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center;">
                     <h2 style="color: #300549; margin-bottom: 30px; font-size: 36px; font-weight: 700;">Support Our Vision</h2>
-                    <p style="line-height: 2; font-size: 18px; color: #444; max-width: 900px; margin: 0 auto;">
+                    <p style="line-height: 2; font-size: 18px; color: #444;">
                         Have you ever felt dizzy while looking at the sky, feeling like all this
                         blueness was just a collage? This feeling is the genesis of our project.
                         Inspired by Magritte's paintings, the film tells the story of an insomniac
